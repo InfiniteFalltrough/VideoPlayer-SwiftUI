@@ -14,7 +14,9 @@
 		F683EEA92722B16300FDCCEB /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F683EEA82722B16300FDCCEB /* VideoPlayerView.swift */; };
 		F683EEAB2722B4A700FDCCEB /* VideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F683EEAA2722B4A700FDCCEB /* VideoModel.swift */; };
 		F683EEAD2722B5B300FDCCEB /* ETC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F683EEAC2722B5B300FDCCEB /* ETC.swift */; };
-		F683EEAF2722B86D00FDCCEB /* LocalVideos.json in Resources */ = {isa = PBXBuildFile; fileRef = F683EEAE2722B86D00FDCCEB /* LocalVideos.json */; };
+		F683EEAF2722B86D00FDCCEB /* LocalVideosData.json in Resources */ = {isa = PBXBuildFile; fileRef = F683EEAE2722B86D00FDCCEB /* LocalVideosData.json */; };
+		F683EEB72722DD9A00FDCCEB /* PreviewLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F683EEB62722DD9A00FDCCEB /* PreviewLabel.swift */; };
+		F683EEB92722E3A500FDCCEB /* LocalVideo.json in Resources */ = {isa = PBXBuildFile; fileRef = F683EEB82722E3A500FDCCEB /* LocalVideo.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,10 +28,12 @@
 		F683EEA82722B16300FDCCEB /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
 		F683EEAA2722B4A700FDCCEB /* VideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoModel.swift; sourceTree = "<group>"; };
 		F683EEAC2722B5B300FDCCEB /* ETC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETC.swift; sourceTree = "<group>"; };
-		F683EEAE2722B86D00FDCCEB /* LocalVideos.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LocalVideos.json; sourceTree = "<group>"; };
+		F683EEAE2722B86D00FDCCEB /* LocalVideosData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LocalVideosData.json; sourceTree = "<group>"; };
 		F683EEB02722B94900FDCCEB /* best_perfomance.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = best_perfomance.mp4; sourceTree = "<group>"; };
 		F683EEB12722B95100FDCCEB /* yellow_rubber_duck.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = yellow_rubber_duck.mp4; sourceTree = "<group>"; };
 		F683EEB32722BA3A00FDCCEB /* sunset.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sunset.mp4; sourceTree = "<group>"; };
+		F683EEB62722DD9A00FDCCEB /* PreviewLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewLabel.swift; sourceTree = "<group>"; };
+		F683EEB82722E3A500FDCCEB /* LocalVideo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LocalVideo.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +69,8 @@
 				F683EE9A2722B04800FDCCEB /* VideoPlayer_SwiftUIApp.swift */,
 				F683EE9C2722B04800FDCCEB /* ContentView.swift */,
 				F683EEA82722B16300FDCCEB /* VideoPlayerView.swift */,
-				F683EEAA2722B4A700FDCCEB /* VideoModel.swift */,
+				F683EEB62722DD9A00FDCCEB /* PreviewLabel.swift */,
+				F683EEB52722DBEA00FDCCEB /* Model */,
 				F683EEB42722BB1100FDCCEB /* ETC */,
 				F683EE9E2722B04B00FDCCEB /* Assets.xcassets */,
 				F683EEA02722B04B00FDCCEB /* Preview Content */,
@@ -95,10 +100,19 @@
 			isa = PBXGroup;
 			children = (
 				F683EEAC2722B5B300FDCCEB /* ETC.swift */,
-				F683EEAE2722B86D00FDCCEB /* LocalVideos.json */,
+				F683EEAE2722B86D00FDCCEB /* LocalVideosData.json */,
+				F683EEB82722E3A500FDCCEB /* LocalVideo.json */,
 				F683EEB22722B96500FDCCEB /* LocalVideos */,
 			);
 			path = ETC;
+			sourceTree = "<group>";
+		};
+		F683EEB52722DBEA00FDCCEB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F683EEAA2722B4A700FDCCEB /* VideoModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,7 +173,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F683EEAF2722B86D00FDCCEB /* LocalVideos.json in Resources */,
+				F683EEAF2722B86D00FDCCEB /* LocalVideosData.json in Resources */,
+				F683EEB92722E3A500FDCCEB /* LocalVideo.json in Resources */,
 				F683EEA22722B04B00FDCCEB /* Preview Assets.xcassets in Resources */,
 				F683EE9F2722B04B00FDCCEB /* Assets.xcassets in Resources */,
 			);
@@ -177,6 +192,7 @@
 				F683EE9B2722B04800FDCCEB /* VideoPlayer_SwiftUIApp.swift in Sources */,
 				F683EEA92722B16300FDCCEB /* VideoPlayerView.swift in Sources */,
 				F683EEAB2722B4A700FDCCEB /* VideoModel.swift in Sources */,
+				F683EEB72722DD9A00FDCCEB /* PreviewLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,7 +331,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -345,7 +361,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

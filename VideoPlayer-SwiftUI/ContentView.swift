@@ -11,41 +11,46 @@ import AVKit
 struct ContentView: View {
     
     @State private var selectedVideo: VideoModel?
-    
+    @State private var videoRate: Float = 0.0
     private let videos = VideoModel.fetchLocalVideos() + VideoModel.fetchRemoteVideos()
     
     var body: some View {
         NavigationView {
             List {
-                ForEach(videos) { v in
+                ForEach(videos) { video in
                     Button (action: {
-                        selectedVideo = v
+                        selectedVideo = video
                     }, label: {
-                        
+                        PreviewLabel(video: video)
                     })
                 }
-            }
-        }.navigationTitle("Top videos")
+            }.listRowSeparator(.hidden) // since iOS 15
+            .navigationTitle("Top videos")
+        }.fullScreenCover(item: $selectedVideo) {
+            videoRate = 1.0
+        } content: { i in
+            fullScreenPlayer(video: i)
+        }
+
     }
     
     @ViewBuilder
-    private func labelPreview(video: VideoModel) -> some View {
-        if video.videoURL != nil {
-            LazyVStack {
-                Text(video.title)
-                    .font(.system(.subheadline))
-                    .frame(
-                        width: ScreenSize.width,
-                        height: ScreenSize.height / 16.24,
-                        alignment: .leading)
-            }.padding(.all)
+    private func fullScreenPlayer(video: VideoModel) -> some View {
+        if let url = video.videoURL {
+            let player = AVPlayer(url: url)
+            
+            VideoPlayerView(player: player)
+                .edgesIgnoringSafeArea(.all)
+                .onAppear {
+                    videoRate = 0.0
+                    player.play()
+                }
+        } else {
+            VStack {
+                Text("Something went wrong!")
+            }.frame(width: ScreenSize.width, height: ScreenSize.height, alignment: .center)
+                .edgesIgnoringSafeArea(.all)
         }
     }
     
 }
-
-//struct ContentView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ContentView()
-//    }
-//}

@@ -23,7 +23,7 @@ extension VideoModel {
     }
     
     static func fetchLocalVideos() -> [VideoModel] {
-        return decodeJSON(fileName: "LocalVideos")
+        return decodeJSON(fileName: "LocalVideosData")
     }
     
     static func fetchRemoteVideos() -> [VideoModel] {
