@@ -10,8 +10,9 @@ import AVKit
 
 struct ContentView: View {
     
+    @Environment(\.presentationMode) var presentationMode
+    
     @State private var selectedVideo: VideoModel?
-    @State private var videoRate: Float = 0.0
     private let videos = VideoModel.fetchLocalVideos() + VideoModel.fetchRemoteVideos()
     
     var body: some View {
@@ -24,10 +25,11 @@ struct ContentView: View {
                         PreviewLabel(video: video)
                     })
                 }
-            }.listRowSeparator(.hidden) // since iOS 15
+            }.onAppear {
+                UITableView.appearance().separatorColor = .clear // .listRowSeparator(.hidden) - available since iOS 15
+            }
             .navigationTitle("Top videos")
         }.fullScreenCover(item: $selectedVideo) {
-            videoRate = 1.0
         } content: { i in
             fullScreenPlayer(video: i)
         }
@@ -39,15 +41,21 @@ struct ContentView: View {
         if let url = video.videoURL {
             let player = AVPlayer(url: url)
             
-            VideoPlayerView(player: player)
+            VideoPlayer(player: player)
                 .edgesIgnoringSafeArea(.all)
                 .onAppear {
-                    videoRate = 0.0
                     player.play()
                 }
         } else {
             VStack {
                 Text("Something went wrong!")
+                Button(action: {
+                    presentationMode.wrappedValue.dismiss()
+                }, label: {
+                    Text("Back")
+                        .fontWeight(.semibold)
+                })
+
             }.frame(width: ScreenSize.width, height: ScreenSize.height, alignment: .center)
                 .edgesIgnoringSafeArea(.all)
         }

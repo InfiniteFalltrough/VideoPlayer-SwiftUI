@@ -16,14 +16,14 @@ struct ScreenSize {
 // - Model extension
 extension VideoModel {
     var localURL: URL? {
-        return Bundle.main.url(forResource: fileName, withExtension: ".mp4")
+        return Bundle.main.url(forResource: fileName, withExtension: "mp4")
     }
     var videoURL: URL? {
         return remoteURL ?? localURL
     }
     
     static func fetchLocalVideos() -> [VideoModel] {
-        return decodeJSON(fileName: "LocalVideosData")
+        return decodeJSON(fileName: "LocalVideos")
     }
     
     static func fetchRemoteVideos() -> [VideoModel] {
