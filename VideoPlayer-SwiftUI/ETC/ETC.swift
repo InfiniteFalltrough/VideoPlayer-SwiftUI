@@ -8,11 +8,6 @@
 import Foundation
 import UIKit
 
-struct ScreenSize {
-    static let width = UIScreen.main.bounds.width
-    static let height = UIScreen.main.bounds.height
-}
-
 // - Model extension
 extension VideoModel {
     var localURL: URL? {
@@ -43,4 +38,9 @@ func decodeJSON<T: Decodable>(fileName: String) -> [T] {
     }
   }
   return []
+}
+
+struct ScreenSize {
+    static let width = UIScreen.main.bounds.width
+    static let height = UIScreen.main.bounds.height
 }

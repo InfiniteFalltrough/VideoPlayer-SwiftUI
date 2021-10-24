@@ -13,8 +13,12 @@ struct ContentView: View {
     @Environment(\.presentationMode) var presentationMode
     
     @State private var selectedVideo: VideoModel?
-    private let videos = VideoModel.fetchLocalVideos() + VideoModel.fetchRemoteVideos()
     
+    private let videos = VideoModel.fetchLocalVideos()
+    /*
+    // for remote video streaming add data to RemoteVideos.json and don't forget to decode this data
+    private let videos = VideoModel.fetchLocalVideos() + VideoModel.fetchRemoteVideos()
+    */
     var body: some View {
         NavigationView {
             List {
@@ -41,7 +45,7 @@ struct ContentView: View {
         if let url = video.videoURL {
             let player = AVPlayer(url: url)
             
-            VideoPlayer(player: player)
+            VideoPlayerView(player: player)
                 .edgesIgnoringSafeArea(.all)
                 .onAppear {
                     player.play()

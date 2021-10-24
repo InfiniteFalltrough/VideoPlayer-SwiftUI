@@ -6,12 +6,16 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 @main
 struct VideoPlayer_SwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .onAppear {
+                    try? AVAudioSession.sharedInstance().setCategory(.playback)
+                }
         }
     }
 }

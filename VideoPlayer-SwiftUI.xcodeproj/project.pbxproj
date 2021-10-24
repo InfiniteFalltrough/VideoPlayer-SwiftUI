@@ -19,6 +19,7 @@
 		F683EEBE2723164000FDCCEB /* sunset.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F683EEB32722BA3A00FDCCEB /* sunset.mp4 */; };
 		F683EEBF2723164400FDCCEB /* bestPerfomance.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F683EEB02722B94900FDCCEB /* bestPerfomance.mp4 */; };
 		F683EEC02723164700FDCCEB /* yellowRubberDuck.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F683EEB12722B95100FDCCEB /* yellowRubberDuck.mp4 */; };
+		F683EEC32723621200FDCCEB /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F683EEC22723621200FDCCEB /* VideoPlayerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		F683EEB32722BA3A00FDCCEB /* sunset.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sunset.mp4; sourceTree = "<group>"; };
 		F683EEB62722DD9A00FDCCEB /* PreviewLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewLabel.swift; sourceTree = "<group>"; };
 		F683EEBA2723124100FDCCEB /* RemoteVideos.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RemoteVideos.json; sourceTree = "<group>"; };
+		F683EEC22723621200FDCCEB /* VideoPlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
+		F683EEC42725793E00FDCCEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,7 @@
 		F683EE992722B04800FDCCEB /* VideoPlayer-SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				F683EEC42725793E00FDCCEB /* Info.plist */,
 				F683EE9A2722B04800FDCCEB /* VideoPlayer_SwiftUIApp.swift */,
 				F683EEC127235AC500FDCCEB /* View */,
 				F683EEB52722DBEA00FDCCEB /* Model */,
@@ -118,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				F683EE9C2722B04800FDCCEB /* ContentView.swift */,
+				F683EEC22723621200FDCCEB /* VideoPlayerView.swift */,
 				F683EEB62722DD9A00FDCCEB /* PreviewLabel.swift */,
 			);
 			path = View;
@@ -203,6 +208,7 @@
 				F683EE9B2722B04800FDCCEB /* VideoPlayer_SwiftUIApp.swift in Sources */,
 				F683EEAB2722B4A700FDCCEB /* VideoModel.swift in Sources */,
 				F683EEB72722DD9A00FDCCEB /* PreviewLabel.swift in Sources */,
+				F683EEC32723621200FDCCEB /* VideoPlayerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +342,7 @@
 				DEVELOPMENT_TEAM = UZ5KQC5H9Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "VideoPlayer-SwiftUI/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -366,6 +373,7 @@
 				DEVELOPMENT_TEAM = UZ5KQC5H9Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "VideoPlayer-SwiftUI/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
